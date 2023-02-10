@@ -1,0 +1,37 @@
+:root {
+/* Шрифты */
+  --montserrat: "Montserrat";
+  --regular: 400;
+  --madium: 500;
+  --semibold: 600;
+  --bold: 700;
+  --extrabold: 800;
+
+  --dafault-fs: 16px;
+  --dafault-lh: 20px;
+
+  /* Цвета */
+  --dark: #333333;
+  --dark-bg: #222222;
+  --white: #ffffff;
+  --orange: #FF9900;
+  --orange-transp: #FFB84D;
+  --dark-orange: #E1670E;
+  --gray-blue: #4f6b8b;
+  --dark-transp: rgba(0, 0, 0, 0.5);
+  --lightgray: #CACACA;
+  --gray: #666666;
+  --dark-light: #414141;
+  --dark-gray: #666666;
+  --black: #000000;
+  --lightgreen: #97EE3F;
+
+  /* Container */
+  --container-max-width: 1870px;
+  --container-padding: 50px;
+
+  /* Transition */
+  --short: .3s;
+}
+
+

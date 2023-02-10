@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кастомки</title>
+  <link href="css/_fonts.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/simplebar@latest/dist/simplebar.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+  <script defer src="js/main.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=229604d6-a61b-43cf-a39d-a5980d9bea65&lang=ru_RU"
+    type="text/javascript"></script>
+
+  <script defer type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init() {
+      // Создание карты.
+      var myMap = new ymaps.Map("map", {
+
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [48.872185, 2.354224],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 15,
+        controls: []
+
+      });
+
+      var myPlacemark = new ymaps.Placemark([48.872185, 2.354224], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: '..//img/subtract.svg',
+        iconImageSize: [30, 42],
+        iconImageOffset: [-3, -42]
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+    }
+  </script>
+  <script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script defer src="js/inputmask.min.js"></script>
+  <script defer src="js/just-validate.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script defer src="js/tooltip.js"></script>
+  <!-- <script defer src="inputmask.min.js"></script>
+  <script defer src="just-validate.min.js"></script> -->
+</head>
+
+<body>
+
+  <!-- ЧЕКБОКС -->
+
+  <h1 class="visually-hidden">Кастомки</h1>
+
+  <div class="container-checkbox">
+    <div class="header">Категории:</div>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" name="dino" class="real-checkbox">
+        <span class="custom-checkbox"></span>
+        <span class="check-text">Динозавры</span>
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" name="bear" class="real-checkbox">
+        <span class="custom-checkbox"></span>
+        <span class="check-text">Медведи</span>
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" name="bear" class="real-checkbox">
+        <span class="custom-checkbox"></span>
+        <span class="check-text">Косули</span>
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" name="bear" class="real-checkbox">
+        <span class="custom-checkbox"></span>
+        <span class="check-text">Лисы</span>
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" name="bear" class="real-checkbox">
+        <span class="custom-checkbox"></span>
+        <span class="check-text">Волки</span>
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" name="bear" class="real-checkbox">
+        <span class="custom-checkbox"></span>
+        <span class="check-text">Олени и лоси</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- СЕЛЕКТ -->
+
+  <div class="container-select">
+    <select class="js-choice">
+      <option value="">Материал</option>
+      <option>Древесина</option>
+      <option>Металл</option>
+      <option>Камень</option>
+      <option>Пластик</option>
+      <option>Композитный</option>
+      <option>Гипс</option>
+    </select>
+  </div>
+
+  <!-- КАРТА -->
+
+  <div class="container-map">
+    <div id="map" style="width: 460px; height: 460px;"></div>
+  </div>
+
+  <!-- СКРОЛЛ -->
+
+  <div class="container-scroll">
+    <div class="customScroll" data-simplebar>
+      Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно
+      развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены
+      отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный
+      эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее:
+      непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом,
+      однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что
+      социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты
+      для первоочередных требований.
+    </div>
+  </div>
+
+  <!-- ФОРМЫ -->
+
+  <div class="container-phone">
+    <div class="elements">
+      <form class="form" id="form" action="" autocomplete="off">
+        <div class="form__input-box">
+          <input class="input__form" id="name" type="text" placeholder="Имя" name="name" autocomplete="off">
+        </div>
+        <div class="form__input-box">
+          <input class="input__form" id="phone" type="text" placeholder="Телефон" name="phone" autocomplete="off">
+        </div>
+        <div class="form__input-box">
+          <input class="input__form" id="email" type="email" placeholder="E-mail" autocomplete="off">
+        </div>
+        <button class="button__form">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ТУЛТИПЫ -->
+
+  <div class="container-tul">
+    <div class="tooltip">
+      <span class="tool__text">
+        Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления
+        внешнеэкономических политик.<span class="help" data-tippy-content="Глава 2, страница 176">
+          <svg class="help" width="16" height="16" viewbox="0 0 16 16" fill="" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z" fill=""/>
+          </svg>
+          </span>
+      </span>
+    </div>
+  </div>
+
+</body>
+
+</html>
